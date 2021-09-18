@@ -1,0 +1,19 @@
+﻿@model UserAccount
+
+<div class="mainbox-login" id="Login-Page">
+    <h1>LOGIN</h1>
+    <form asp-action="LoginAction" class="form-login" method="get" id="form">
+        <input asp-for="Username" name="Username" id="Username" class="input-login" placeholder="Username"
+            type="text" />
+        <div id="Validate__Id">Please fill up your Id</div>
+        <input asp-for="Password" name="Password" id="Password" class="input-login" placeholder="Password"
+            type="password" />
+        <div id="Validate__Password">Please fill up your Password</div>
+        <button type="submit" id="Login-button">Sign in</button>
+    </form>
+    <div class="social-login">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-google-plus"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>

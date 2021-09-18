@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Swift.Models.UserAccount>
+<h2 class="admin-title">Profile</h2>
+<div class="modal-1">
+    <div class="modal-header" id="modal">
+        <div class="modal-title">ต้องการลบข้อมูลออก ?</div>
+    </div>
+    <div id="ManageButton" class="modal-body">
+        <button id="button-2" class="btn btn-danger">ยกเลิก</button>
+        <button id='button-1' class="btn btn-success">ตกลง</button>
+    </div>
+</div>
+<div class="complete">
+    <div class="com-header">
+        <i class="far fa-check-circle"></i>
+    </div>
+    <div class="com-body">
+        <div class="com-content">ทำการลบข้อมูลสำเร็จแล้ว!</div>
+    </div>
+</div>
+<div class="admin-box">
+    <table class="table">
+        <tr class="table-head">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-white text-muted">@item.UserId</td>
+                <td class="text-white text-muted">@item.Username</td>
+                <td class="text-white text-muted">Mairom@gmail.com</td>
+                <td class="text-white text-muted">Male</td>
+                <td class="text-white text-muted"><i class="fas fa-edit"></i> <i class="fas fa-trash-alt"></i></td>
+            </tr>
+        }
+    </table>
+    <a class="button-admin" asp-action="ExportToExcel">Export</a>
+</div>

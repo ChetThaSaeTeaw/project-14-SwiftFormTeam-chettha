@@ -1,0 +1,43 @@
+﻿@model UserAccount
+
+<div class="register-page">
+    <div class="register-brand">
+        <h1>Wellcome Register Page</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni aliquid voluptates, placeat nemo quas at
+            hictempore eveniet beatae eum, praesentium facilis fugiat aliquam vel sapiente tempora sint qui officia.</p>
+        <img src="https://cdn.pixabay.com/photo/2017/06/24/09/56/womens-2437214_960_720.jpg" alt="Human">
+    </div>
+    <div class="register-box">
+        <h2>REGISTER</h2>
+        <p>IT'S COMPLETELY FREE</p>
+        <form asp-action="RegisterAction" id="submit-form">
+            <label class="label-input">NAME</label>
+            <input class="input-form" type="text" placeholder="Your fullname" id="Input__Name">
+            <div id="validated__name">PLEASE FILL UP YOUR NAME</div>
+            <label class="label-input">USERNAME/ID</label>
+            <input type="text" class="input-form" placeholder="Username/Id" id="Username2">
+            <div id="validated__username">PLEASE FILL UP USERNAME/ID</div>
+            <label class="label-input">EMAIL</label>
+            <input type="email" class="input-form" id="Input__email" placeholder="Email address" />
+            <div id="validated__email">PLEASE FILL UP EMAIL</div>
+            <label class="label-input">PASSWORD</label>
+            <input type="password" class="input-form" placeholder="Password" id="Input__Password" />
+            <div id="validated__password">PLEASE FILL UP PASSWORD</div>
+            <label class="label-input">CONFIRM PASSWORD</label>
+            <input type="password" class="input-form" placeholder="Conform password" id="Input__ConfirmPass" />
+            <div id="validated__confirm">PLEASE FILL UP CONFIRM PASSWORD</div>
+            <div class="radio-box">
+                <h6>GENDER</h6>
+                <div>
+                    <input type="radio" /><label>Male</label>
+                </div>
+                <div>
+                    <input type="radio" /><label>Female</label>
+                </div>
+            </div>
+            <label class="label-input">ADDRESS</label>
+            <textarea class="area-form" cols="30" placeholder="Your address"></textarea>
+            <button class="register-button" type="submit" placeholder="Register">Submit</button>
+        </form>
+    </div>
+</div>
